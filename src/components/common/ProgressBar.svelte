@@ -79,7 +79,7 @@
 	}}
 	class="progressBarContainer"
 	id={containerID}
-	style="position: absolute; top: {top}; left: {left}; width: {width}; height: {progressBarHeight}; background-color: {secondaryColor
+	style="position: absolute; top: {top}; left: {left}; width: {width}; height: {height}; background-color: {secondaryColor
 		? secondaryColor
 		: '#99999920'}; {style}"
 >

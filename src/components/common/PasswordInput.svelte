@@ -3,10 +3,10 @@
 	import isMobile from '../../fn/isMobile';
 	import { RangeScaler } from '../../fn/RangeScaler.js';
 	import screenSize from '../../stores/screenSize.js';
-	import GlobalStyles from '../../config/GlobalStyles.js';
 	import FigmaImporter from '../../fn/figmaImporter.js';
 	import getFigmaImportConfig from '../../config/FigmaImportConfig.js';
 	import { createEventDispatcher } from 'svelte';
+	import globalStyle from '../../stores/globalStyles';
 	const dispatch = createEventDispatcher();
 	let lglobalStyles = $globalStyle;
 
@@ -31,6 +31,11 @@
 	let horizontalFont;
 	let verticalFont = lglobalStyles.regularMobileFont;
 	let opacity;
+	let paddingRight = '0%';
+	let paddingLeft = '0%';
+	let paddingTop = '0%';
+	let paddingBottom = '0%';
+	let padding;
 	let backdropFilter;
 	let borderRadius = lglobalStyles.borderRadius;
 	let defaultValue = '';
@@ -146,6 +151,11 @@
 		show,
 		tabletWidth,
 		desktopFont,
+		paddingRight,
+		paddingLeft,
+		paddingTop,
+		paddingBottom,
+		padding,
 		fontType,
 		horizontalCenter,
 		verticalCenter,
@@ -199,6 +209,11 @@
 			clientHeight +
 			'px;'}
     backdrop-filter: {iu(backdropFilter, 'blur(0px)')};
+	padding-right: {paddingRight};
+	padding-top: {paddingTop};
+	padding-bottom: {paddingBottom};
+	padding-left: {paddingLeft};
+	padding: {padding};
     --webkit-backdrop-filter: {iu(backdropFilter, 'blur(0px)')};
     {iu(style, '')}"
 		bind:value

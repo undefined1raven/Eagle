@@ -3,7 +3,6 @@
 	import isMobile from '../../fn/isMobile.ts';
 	import { RangeScaler } from '../../fn/RangeScaler.js';
 	import screenSize from '../../stores/screenSize';
-	import GlobalStyles from '../../config/GlobalStyles';
 	import FigmaImporter from '../../fn/figmaImporter.js';
 	import getFigmaImportConfig from '../../config/FigmaImportConfig';
 	import readTransitions from '../../fn/readTransitions.js';
